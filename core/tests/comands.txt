@@ -1,0 +1,9 @@
+cd C:\xampp\php
+php phpunit-8.5.3.phar --version
+php phpunit-8.5.3.phar --verbose ./DataBaseManagerTest.php
+php phpunit-8.5.3.phar --bootstrap C:\xampp\htdocs\Memorama-mamaster\core\php\DataBaseManager.php .\DataBaseManagerTest.php
+php phpunit-8.5.3.phar --bootstrap ../php/DataBaseManager.php ./DataBaseManagerTest.php
+
+composer require --dev phpunit/phpunit ^8 
+composer du
+./vendor/bin/phpunit --testdox core/tests
