@@ -25,7 +25,7 @@ class MateriasManager{
         /*
          * Falla cuando se llama a la funcion close();
          * */
-        //$this->dbManager->close();
+        $this->dbManager->close();
         self::$_instance = null;
     }
 

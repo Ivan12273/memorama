@@ -80,7 +80,7 @@ final class MateriasManagerTest extends Testcase
    */
   public function testGetMateria($idMateria, $resultado)
   {
-    $MatManagerMock = $this->getMockBuilder(MateriasManager::class)
+    $MatManagerMock = $this->getMockBuilder(DataBasaeManager::class)
       ->disableOriginalConstructor()
       ->setMethods(['getMateria', 'close'])
       ->getMock();
