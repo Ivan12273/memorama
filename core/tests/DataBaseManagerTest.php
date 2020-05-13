@@ -20,7 +20,8 @@ final class DataBaseManagerTest extends TestCase
   public function testInsertQuery($idMateria, $resultado, $nombre)
   {
     $dbManagerMock = $this->getMockBuilder(DataBaseManager::class)
-      ->setMethods(['insertQuery'])
+      ->disableOriginalConstructor()
+      ->setMethods(['insertQuery', 'close'])
       ->getMock();
 
     $dbManagerMock->expects($this->exactly(1))
@@ -33,7 +34,7 @@ final class DataBaseManagerTest extends TestCase
   public function realizeQueryProvider()
   {
     return [
-      'test positivo' => [1, array('El 1' , 'El 2')],
+      'test positivo' => [1, array('El 1', 'El 2')],
       'test negativo' => [5, null]
     ];
   }
@@ -44,7 +45,8 @@ final class DataBaseManagerTest extends TestCase
   public function testRealizeQuery($idMateria, $resultado)
   {
     $dbManagerMock = $this->getMockBuilder(DataBaseManager::class)
-      ->setMethods(['realizeQuery'])
+      ->disableOriginalConstructor()
+      ->setMethods(['realizeQuery', 'close'])
       ->getMock();
 
     $dbManagerMock->expects($this->exactly(1))
@@ -71,6 +73,7 @@ final class DataBaseManagerTest extends TestCase
   public function testClose($existeConexion, $resultado)
   {
     $dbManagerMock = $this->getMockBuilder(DataBaseManager::class)
+      ->disableOriginalConstructor()
       ->setMethods(['close'])
       ->getMock();
 
