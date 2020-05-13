@@ -108,9 +108,6 @@ class MateriasManager{
         }
     }
 
-
-
-
     private function setValuesToResult($result){
         $matter = array();
         for ($i=0;$i<count($result);$i++) {
