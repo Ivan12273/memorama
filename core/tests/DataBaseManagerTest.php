@@ -10,7 +10,7 @@ final class DataBaseManagerTest extends TestCase
   public function insertQueryProvider()
   {
     return [
-      'test positivo' => [3, true, 'Español'],
+      'test positivo' => [3, true],
       'test negativo' => [1, false, 'Matematicas']
     ];
   }
